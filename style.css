@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Ropa+Sans");
+body {
+  color: white;
+  font-family: 'Ropa Sans', sans-serif;
+  font-size: 21px;
+  overflow: hidden;
+  text-shadow: 2px 2px 3px #000000;
+}
+
+#chat {
+  position: absolute;
+  bottom: 10px;
+  width: 500px;
+}
+
+.chat-line {
+  overflow: hidden;
+  max-height: 0px;
+  -webkit-transition: opacity 2s, max-height 1s, margin-top 1s;
+  transition: opacity 2s, max-height 1s, margin-top 1s;
+}
+.chat-line.visible {
+  margin-top: 10px;
+  max-height: 300px;
+  -webkit-transition: opacity 2s, max-height 1s, margin-top 300ms;
+  transition: opacity 2s, max-height 1s, margin-top 300ms;
+}
+.chat-line {
+  background-color: rgba(31, 31, 31, 0);
+  overflow-wrap: break-word;
+}
+
+ .chat-line-inner{
+   overflow-wrap: break-word;
+ }
+
+.chat-line .chat-line-inner .badges img.badge {
+  margin-right: 6px;
+  vertical-align: text-bottom;
+  width: 21px;
+  height: 21px;
+}
+.chat-line .chat-line-inner.admin .message {
+  opacity: 0.4;
+}
+
+.user-name {
+  color: #ff6bb5;
+}
+
+.message img {
+  vertical-align: text-bottom;
+}
+.message img.emoji {
+  width: 20px;
+}
