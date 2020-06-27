@@ -192,7 +192,7 @@ client.on('messagedeleted', (channel, username, deletedMessage, userstate) => {
 client.on('timeout', (channel, username) => {
     removeChatLine({ channel, username });
   });
-};
+}
 
 function removeChatLine(params = {}) {
   if ('channel' in params) {
@@ -206,7 +206,7 @@ function removeChatLine(params = {}) {
     chatEle.removeChild(n)
   );
   //     chatEle.removeChild(n)
-};
+}
 
 
 function removeAdminChatLine(params = {}) {
@@ -307,13 +307,13 @@ function showMessage({ chan, type, message = '', data = {}, timeout = 0, attribs
     colonEle.classList.add('message-colon');
     if(data["message-type"] === "action"){
       colonEle.style.color = data.color
-    };
+    }
     colonEle.innerText = ': ';
 
     let messageEle = document.createElement('span');
     if(data["message-type"] === "action"){
       messageEle.style.color = data.color
-    };
+    }
     messageEle.classList.add('message');
 
     let finalMessage = handleEmotes(chan, data.emotes || {}, message);
@@ -331,7 +331,7 @@ function showMessage({ chan, type, message = '', data = {}, timeout = 0, attribs
   }
 
   //s dsd
-  else(console.log("DAS STARTET MIT NEM AUSRUFEZEICHEN DU VOLLHONK!"))};
+  else(console.log("DAS STARTET MIT NEM AUSRUFEZEICHEN DU VOLLHONK!"))}
 
 
   if (type === 'admin') {
