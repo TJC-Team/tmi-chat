@@ -497,12 +497,6 @@ function getBadges(channel) {
   then(data => data.badge_sets);
 }
 
-function getClip(clipSlug) {
-  return kraken({
-    endpoint: `clips/${clipSlug}` });
-
-}
-
 function getBTTVEmotes(channel) {
   let endpoint = 'emotes';
   let global = true;
